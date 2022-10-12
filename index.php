@@ -19,7 +19,12 @@
     
 </head>
 <!-- Remember to chmod 0755 uploads directory -->
-
+    <script src="./axios.min.js"></script>
+    
+    <!-- Ethereum library for interacting with the blockchain -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.8/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.7.8/dist/umd/index.min.js"></script>
 
 <!--body {
   background: lightblue url("img_tree.gif") no-repeat fixed center;
@@ -105,7 +110,7 @@ include_once("render.php");
             echo "</p>";
         }  
 									
-        elseif  ( $page == "" ){
+        elseif  ( $page == "" ){ // index.php
 			echo "main page";
 		echo '<div class="wrapper">';
 echo			'<div class="progress-bar">';
@@ -115,14 +120,19 @@ echo			'<div class="progress-bar">';
 
 
 
-			render("books");
+		//	render("books");
 			//render("stories");
 
 			}
 
         echo '</div>'; //end of green content box
 
+include ("faucet2.php");
       ?>
+      
+  
+     
+
 <progress max="100" value="80"></progress>
 	<div id="footer2" style="border-radius: 15px 15px 15px 15px;margin:10px;background:#d0d0d0;clear:both;border:1px black solid;">
 	    			<br><br>
