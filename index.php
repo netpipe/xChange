@@ -36,7 +36,7 @@
 	 <!--logo-->
     <div align="center" style="color:black;background-color:#4A5568;border-radius: 5px 5px 5px 5px;border:2px black solid;height:100%;width:100%;">
         <div style="margin:1px; border-radius: 15px 15px 15px 15px; border:black solid 1px; background:#515151">
-        	<img src="qtcoin2.png" width="800px" />
+        	<img src="xchange.png" width="800px" />
         </div>
        <!-- <img src="logo3.png" width="1000px" /> -->
 	<!--<div style="border:2px black solid;" > style="border:2px black solid;" -->
