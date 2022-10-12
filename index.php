@@ -19,25 +19,29 @@
     
 </head>
 <!-- Remember to chmod 0755 uploads directory -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./axios.min.js"></script>
+   <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+    <script type="text/javascript" src="./assets/axios.min.js"></script>
     
-    <!-- Ethereum library for interacting with the blockchain -->
+    <!-- Ethereum library for interacting with the blockchain 
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.8/dist/index.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.7.8/dist/umd/index.min.js"></script>
-
+-->
+    <script type="text/javascript" src="./assets/web3.min.js"></script>
+    <script type="text/javascript" src="./assets/index.js"></script>
+    <script type="text/javascript" src="./assets/index.min.js"></script>
 <!--body {
   background: lightblue url("img_tree.gif") no-repeat fixed center;
   background-image: url('')
 } -->
+
 
 <body style="background:#968D87">
  <div id="wrapper">
 	 <!--logo-->
     <div align="center" style="color:black;background-color:#4A5568;border-radius: 5px 5px 5px 5px;border:2px black solid;height:100%;width:100%;">
         <div style="margin:1px; border-radius: 15px 15px 15px 15px; border:black solid 1px; background:#515151">
-        	<img src="xchange.png" width="800px" />
+        	<img src="qtcoin2.png" width="800px" />
         </div>
        <!-- <img src="logo3.png" width="1000px" /> -->
 	<!--<div style="border:2px black solid;" > style="border:2px black solid;" -->
