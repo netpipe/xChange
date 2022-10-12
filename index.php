@@ -1,8 +1,8 @@
-<!DOCTYPE html>
 <?php
-	session_start();
+//	session_start();
 	require_once 'login_query.php';
 ?>
+<!DOCTYPE html>
 <html xml:lang="en" lang="en">
 <head>
     <meta name="Keywords" content="keywords" /><meta name="Description" content="qtCoin" />
@@ -75,7 +75,7 @@
 			echo "session val:: Password: ".$_SESSION['password']."</br>";
 		?>
 		<a href="login.php">Logout</a>
-		<h1>Welcome <?php echo $username; ?> !</h1>
+		<h1>Welcome <?php $username=""; echo $username; ?> !</h1>
 	</div>
     
 <?php
@@ -95,7 +95,8 @@ include_once("render.php");
         
         
         //GET PAGE CALLBACK
-        $page=$_GET["page"];
+        $page="";
+       // $page=$_GET["page"];
 
         // CONTACT
         if  ( $page == "contact" && true){

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php 
 //starting the session
-session_start();
-unset($_SESSION["username"]);
-unset($_SESSION["password"]);
+//session_start();
+//unset($_SESSION["username"]);
+//unset($_SESSION["password"]);
 ?>
 <html lang="en">
 	<head>
