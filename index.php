@@ -19,6 +19,7 @@
     
 </head>
 <!-- Remember to chmod 0755 uploads directory -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./axios.min.js"></script>
     
     <!-- Ethereum library for interacting with the blockchain -->
