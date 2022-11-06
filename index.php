@@ -85,7 +85,7 @@ include_once("render.php");
         }  
                 elseif ( $page == "coins" ) {
 			echo '<p align="middle"><B>' . $sitename . ' Books</B>';
-			$bookpath = "books";
+			$bookpath = "images";
 			$dirs = glob($bookpath . '/*' , GLOB_ONLYDIR);
 			foreach($dirs as $dirs2) {
 				render($dirs2.".html");
@@ -93,21 +93,33 @@ include_once("render.php");
 			}
             echo "</p>";
         }  
+                elseif (  $page == "pot" ) {
+			echo '<p align="middle"><B>Cannabis Pictures</B>';
+			$picpath = "uploads/pic/authd";
+			$dirs = glob($picpath . '/*' , GLOB_ONLYDIR);
+			foreach($dirs as $dirs2) {
+				render($dirs2);
+				//get first file from dir to display as picture
+			}
+            echo "</p>";
+        }  
+				
 									
-        elseif  ( $page == "" ){ // index.php
-			echo "main page";
-		echo '<div class="wrapper">';
-echo			'<div class="progress-bar">';
-	echo			'<span class="progress-bar-fill" style="width: 80%;"></span>';
-			echo '</div>';
-		echo '</div>';
+    //    elseif  ( $page == "" ){ // index.php
+	//		echo "main page";
+		//echo '<div class="wrapper">';
+    //echo			'<div class="progress-bar">';
+	//echo			'<span class="progress-bar-fill" style="width: 80%;"></span>';
+			//echo '</div>';
+		//echo '</div>';
 
 
 
 		//	render("books");
 			//render("stories");
 
-			}
+		//	}
+
 		//	  include ("./PHPChart/examples/pie.php");
    //include ("./phpm/examples/download_chart_as_buffer.php");
         echo '</div>'; //end of green content box
