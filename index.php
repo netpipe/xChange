@@ -88,7 +88,8 @@ include_once("render.php");
 			$bookpath = "images";
 			$dirs = glob($bookpath . '/*' , GLOB_ONLYDIR);
 			foreach($dirs as $dirs2) {
-				render($dirs2.".html");
+				//render($dirs2.".php");
+					render($dirs2);
 				//get first file from dir to display as picture
 			}
             echo "</p>";
@@ -103,24 +104,17 @@ include_once("render.php");
 			}
             echo "</p>";
         }  
-                elseif ( $page == "videos" ) {
-			echo '<p align="middle"><B>GrandGallery Videos</B></p>';
-			$movpath = "uploads/mov/authd";
-			$dirs = glob($movpath . '/*' , GLOB_ONLYDIR);
-			foreach($dirs as $dirs2) {
-				render($dirs2);
-				//get first file from dir to display as picture
-			}
-        // PICTURES
-        } 
+
 				else {
 			//$expandedpath=site_root($page);
 			$expandedpath = explode("/", $page);
+					$expandedpath2 = $expandedpath[count($expandedpath) - 1];
 			$expandedpath = $expandedpath[count($expandedpath) - 3];
+	
 			echo $expandedpath;
-			if ( $expandedpath == "pic"){
+			if ( $expandedpath == "images"){
 			//uploads/mov/authd/
-                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
+                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif,php}', GLOB_BRACE);
 
 			} elseif ( $expandedpath == "mov"){
 				
@@ -129,7 +123,12 @@ include_once("render.php");
 			}
 			    foreach($files as $file) {
 					render($file);
+					
 				}
+				//		echo "PIC";
+					//	echo "./." . $page . "/" . $expandedpath2;
+			include('./' . $page . '/' . $expandedpath2 . '.php');
+		//	include ("./images/cg/cg.php");
 		//	echo "unknown issue or age not verified.";
          //   header("location: http://www.grandgallery.net") ;
 			}		

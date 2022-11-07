@@ -20,14 +20,23 @@
 					echo '<a href="?page=' . $file . '">' . $dirname . '</a>';
 				}
 				if ( $extension == "php") {
-					echo '<a href="./books/' . $filename . '/index.html">' . $filename . '</a>';
+					echo '<a href="./book/' . $filename . "/"  . $filename . '.php">' . $filename . '</a>';
+					echo "PIC";
+					//echo "include ./book/" . $filename . '/index.php">
+				}
+								if ( $extension == "jpg") {
+					echo "PIC";
+					//echo "include ./book/" . $filename . '/index.php">
 				}
 				else {
-					echo '<a href="' . $file . '">' . $file . '</a>';
+					echo '<a href="' . $file . "/" . $filename . '.php">' . $file . '</a>';
+				//	echo 'include' . $file . "/" . $filename . ".php";
+				echo "PIC";
 				}
 				echo '</div>';
 				//3rd bubble
 				echo '<div style="border-radius: 15px 15px 15px 15px;width:10%; text-align:center; float:left;background-color:#3A455B;height:20px;">';
+				
 				echo '</div>';
 			    echo '</div>'; //titlebar
 
@@ -54,9 +63,9 @@
 						// echo "testing123";
 						 //echo $dirname;
 						 echo '<div align="middle" style="height:300px;width:300px">';
-						 echo '<p><a href="./books/' . $filename . '/index.html">' ;
-
-						// echo '<img src="./books/' . $filename . '/' . $filename . '.jpg' . '"' . ' alt="' . $filename . '"' . ' width="' . '160px"' . ' height="' . '160px"' . '/></a></p>';
+						 //echo '<p><a href="./books/' . $filename . '/index.html">' ;
+echo "PIC";
+					//	 echo '<img src="./books/' . $filename . '/' . $filename . '.jpg' . '"' . ' alt="' . $filename . '"' . ' width="' . '160px"' . ' height="' . '160px"' . '/></a></p>';
 						 echo "</div>";		
 						// echo "</p>";
 						// need jpg or png option
