@@ -80,12 +80,23 @@ include_once("render.php");
         if  ( $page == "contact"){
             echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
           // rendervideo($test);
-          
-		// VIDEOS
-        }  
+
+        }   
+        //GAMES            
+           elseif ( $page == "games" ) {
+			echo '<p align="middle"><B>' . $sitename . ' Books</B>';
+			$bookpath = "wallets";
+			$dirs = glob($bookpath . '/*' , GLOB_ONLYDIR);
+			foreach($dirs as $dirs2) {
+				//render($dirs2.".php");
+					render($dirs2);
+				//get first file from dir to display as picture
+			}
+			}
+			//COINS
                 elseif ( $page == "coins" ) {
 			echo '<p align="middle"><B>' . $sitename . ' Books</B>';
-			$bookpath = "images";
+			$bookpath = "wallets";
 			$dirs = glob($bookpath . '/*' , GLOB_ONLYDIR);
 			foreach($dirs as $dirs2) {
 				//render($dirs2.".php");
@@ -94,9 +105,10 @@ include_once("render.php");
 			}
             echo "</p>";
         }  
+        //CANNABIS
                 elseif (  $page == "pot" ) {
 			echo '<p align="middle"><B>Cannabis Pictures</B>';
-			$picpath = "uploads/mov/authd";
+			$picpath = "images";
 			$dirs = glob($picpath . '/*' , GLOB_ONLYDIR);
 			foreach($dirs as $dirs2) {
 				render($dirs2);
@@ -114,7 +126,7 @@ include_once("render.php");
 			echo $expandedpath;
 			if ( $expandedpath == "images"){
 			//uploads/mov/authd/
-                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif,php}', GLOB_BRACE);
+                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
 
 			} elseif ( $expandedpath == "mov"){
 				
