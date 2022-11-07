@@ -19,7 +19,7 @@
 				if ( $extension == "") {
 					echo '<a href="?page=' . $file . '">' . $dirname . '</a>';
 				}
-				if ( $extension == "html") {
+				if ( $extension == "php") {
 					echo '<a href="./books/' . $filename . '/index.html">' . $filename . '</a>';
 				}
 				else {
@@ -50,13 +50,13 @@
 						 echo "</div>";		
 						// echo "</p>";
 					 }
-					 elseif ( $extension == "html" ) { 
+					 elseif ( $extension == "php" ) { 
 						// echo "testing123";
 						 //echo $dirname;
 						 echo '<div align="middle" style="height:300px;width:300px">';
 						 echo '<p><a href="./books/' . $filename . '/index.html">' ;
 
-						 echo '<img src="./books/' . $filename . '/' . $filename . '.jpg' . '"' . ' alt="' . $filename . '"' . ' width="' . '160px"' . ' height="' . '160px"' . '/></a></p>';
+						// echo '<img src="./books/' . $filename . '/' . $filename . '.jpg' . '"' . ' alt="' . $filename . '"' . ' width="' . '160px"' . ' height="' . '160px"' . '/></a></p>';
 						 echo "</div>";		
 						// echo "</p>";
 						// need jpg or png option

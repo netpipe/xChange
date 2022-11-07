@@ -95,7 +95,7 @@ include_once("render.php");
         }  
                 elseif (  $page == "pot" ) {
 			echo '<p align="middle"><B>Cannabis Pictures</B>';
-			$picpath = "uploads/pic/authd";
+			$picpath = "uploads/mov/authd";
 			$dirs = glob($picpath . '/*' , GLOB_ONLYDIR);
 			foreach($dirs as $dirs2) {
 				render($dirs2);
@@ -103,7 +103,36 @@ include_once("render.php");
 			}
             echo "</p>";
         }  
+                elseif ( $page == "videos" ) {
+			echo '<p align="middle"><B>GrandGallery Videos</B></p>';
+			$movpath = "uploads/mov/authd";
+			$dirs = glob($movpath . '/*' , GLOB_ONLYDIR);
+			foreach($dirs as $dirs2) {
+				render($dirs2);
+				//get first file from dir to display as picture
+			}
+        // PICTURES
+        } 
+				else {
+			//$expandedpath=site_root($page);
+			$expandedpath = explode("/", $page);
+			$expandedpath = $expandedpath[count($expandedpath) - 3];
+			echo $expandedpath;
+			if ( $expandedpath == "pic"){
+			//uploads/mov/authd/
+                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
+
+			} elseif ( $expandedpath == "mov"){
 				
+				$files = glob($page.'/*.{webm}', GLOB_BRACE);
+
+			}
+			    foreach($files as $file) {
+					render($file);
+				}
+		//	echo "unknown issue or age not verified.";
+         //   header("location: http://www.grandgallery.net") ;
+			}		
 									
     //    elseif  ( $page == "" ){ // index.php
 	//		echo "main page";
