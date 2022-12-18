@@ -108,7 +108,7 @@ unset($_SESSION["success"]);
 
 				//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
-			include('./' . $page . '/' . $expandedpath2 . '/index.php');
+			include('./' . $page . '/' . $expandedpath2 . '.php');
 						//include('./' . $page . '/index.php');
 		//	include ("./images/cg/cg.php");
 		//	echo "unknown issue or age not verified.";
