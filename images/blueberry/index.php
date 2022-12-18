@@ -1,4 +1,7 @@
 <?php
- echo "test testing!"; 
+ echo "blueberry";
+   echo "test testing!"; 
+ 
+ echo '<img src="' . $page . "/" . $expandedpath2 . '.png" />';
  
  ?>
