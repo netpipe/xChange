@@ -104,11 +104,14 @@ unset($_SESSION["success"]);
 					render($file);
 					
 				}
-			}
-
-				//		echo "PIC";
+			} else {
+			if ( $expandedpath != "" )
+							//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
 			include('./' . $page . '/' . $expandedpath2 . '.php');
+			}
+
+
 						//include('./' . $page . '/index.php');
 		//	include ("./images/cg/cg.php");
 		//	echo "unknown issue or age not verified.";
