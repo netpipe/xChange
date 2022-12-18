@@ -38,7 +38,7 @@
 			echo "session val:: Username: ".$_SESSION['username'].".</br>";
 			echo "session val:: Password: ".$_SESSION['password']."</br>";
 		?>
-		<a href="login.php">Logout</a>
+		<a href="index.php?page=login">Logout</a>
 		<h1>Welcome <?php $username=""; echo $username; ?> !</h1>
 	</div>
       
