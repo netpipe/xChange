@@ -86,7 +86,7 @@ unset($_SESSION["success"]);
 				else {
 			//$expandedpath=site_root($page);
 			$expandedpath = explode("/", $page);
-					$expandedpath2 = $expandedpath[count($expandedpath) - 1];
+			$expandedpath2 = $expandedpath[count($expandedpath) - 1];
 			$expandedpath = $expandedpath[count($expandedpath) - 3];
 	
 			echo $expandedpath;
@@ -105,14 +105,15 @@ unset($_SESSION["success"]);
 					
 				}
 			} else {
-			if ( $expandedpath != "" )
+			if ( $expandedpath2 != "" ){
 							//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
-			include('./' . $page . '/' . $expandedpath2 . '.php');
+			//include('./' . $page . '/' . $expandedpath2 . '.php');
+		    include('./' . $page . '/index.php');}
 			}
 
 
-						//include('./' . $page . '/index.php');
+						
 		//	include ("./images/cg/cg.php");
 		//	echo "unknown issue or age not verified.";
          //   header("location: http://www.grandgallery.net") ;
