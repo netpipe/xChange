@@ -46,26 +46,18 @@
 //~ ini_set('display_errors', 1);
 //~ ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-$sitename="qtCoin.ca";
+    $sitename="qtCoin.ca";
          //   $pwd = getcwd();
             //chdir('test');
         
-        
-include_once("render.php");
-	   
-	
+    include_once("render.php");
         //start of green div content box
-        echo '<div id="vbody" style="border-radius: 15px 15px 15px 15px;clear:both;text-align:center;background-color:green; margin:20px;border:2px black solid;" >';
+    echo '<div id="vbody" style="border-radius: 15px 15px 15px 15px;clear:both;text-align:center;background-color:green; margin:20px;border:2px black solid;" >';
         
-include ("pageHandler.php");
-
+    include ("pageHandler.php");
 		//	  include ("./PHPChart/examples/pie.php");
    //include ("./phpm/examples/download_chart_as_buffer.php");
-        echo '</div>'; //end of green content box
-
-
-
-
+    echo '</div>'; //end of green content box
       ?>
 
     

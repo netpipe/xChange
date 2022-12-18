@@ -5,6 +5,15 @@
 echo $_GET['success'];
 unset($_SESSION["success"]);
 
+
+        // CONTACT
+        if  ( $page == "product"){
+          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
+          // rendervideo($test);
+          include($page + "/index.php"); 
+
+        }   
+        
         // CONTACT
         if  ( $page == "register"){
           //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
@@ -99,7 +108,8 @@ unset($_SESSION["success"]);
 
 				//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
-	//		include('./' . $page . '/' . $expandedpath2 . '.php');
+			//include('./' . $page . '/' . $expandedpath2 . '/index.php');
+						include('./' . $page . '/index.php');
 		//	include ("./images/cg/cg.php");
 		//	echo "unknown issue or age not verified.";
          //   header("location: http://www.grandgallery.net") ;
