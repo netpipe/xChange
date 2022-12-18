@@ -19,21 +19,7 @@
     
 </head>
 <!-- Remember to chmod 0755 uploads directory -->
-   <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
-    <script type="text/javascript" src="./assets/axios.min.js"></script>
 
-    <!-- Ethereum library for interacting with the blockchain 
-    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.8/dist/index.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.7.8/dist/umd/index.min.js"></script>
--->
-    <script type="text/javascript" src="./assets/web3.min.js"></script>
-    <script type="text/javascript" src="./assets/index.js"></script>
-    <script type="text/javascript" src="./assets/index.min.js"></script>
-<!--body {
-  background: lightblue url("img_tree.gif") no-repeat fixed center;
-  background-image: url('')
-} -->
 
 
 <body style="background:#968D87">
@@ -73,9 +59,25 @@ include_once("render.php");
         
         
         //GET PAGE CALLBACK
-        $page="";
+       // $page="";
         $page=$_GET["page"];
+echo $_GET['success'];
+unset($_SESSION["success"]);
 
+        // CONTACT
+        if  ( $page == "register"){
+          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
+          // rendervideo($test);
+          include("register.php"); 
+
+        }   
+        // CONTACT
+        if  ( $page == "login"){
+          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
+          // rendervideo($test);
+          include("login.php"); 
+
+        }   
         // CONTACT
         if  ( $page == "contact"){
             echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
@@ -96,6 +98,20 @@ include_once("render.php");
 			//COINS
                 elseif ( $page == "coins" ) {
 			echo '<p align="middle"><B>' . $sitename . ' Books</B>';
+			
+		    echo '<form action="upload.php" method="post" enctype="multipart/form-data">';
+            echo    '<p style="color:#F78989">use wallet generated file to upload transaction';
+            echo   '<input type="file" name="fileToUpload" id="fileToUpload">';
+            echo    '<input type="submit" value="Upload" name="submit">';
+            echo   '</p>';
+            echo '</form>';
+    
+    
+			include ("faucet2.php");
+			
+			
+
+    
 			$bookpath = "wallets";
 			$dirs = glob($bookpath . '/*' , GLOB_ONLYDIR);
 			foreach($dirs as $dirs2) {
@@ -127,19 +143,22 @@ include_once("render.php");
 			if ( $expandedpath == "images"){
 			//uploads/mov/authd/
                 $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
-
-			} elseif ( $expandedpath == "mov"){
-				
-				$files = glob($page.'/*.{webm}', GLOB_BRACE);
-
-			}
 			    foreach($files as $file) {
 					render($file);
 					
 				}
+			} elseif ( $expandedpath == "mov"){
+				
+				$files = glob($page.'/*.{webm}', GLOB_BRACE);
+			    foreach($files as $file) {
+					render($file);
+					
+				}
+			}
+
 				//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
-			include('./' . $page . '/' . $expandedpath2 . '.php');
+	//		include('./' . $page . '/' . $expandedpath2 . '.php');
 		//	include ("./images/cg/cg.php");
 		//	echo "unknown issue or age not verified.";
          //   header("location: http://www.grandgallery.net") ;
@@ -164,7 +183,7 @@ include_once("render.php");
    //include ("./phpm/examples/download_chart_as_buffer.php");
         echo '</div>'; //end of green content box
 
-include ("faucet2.php");
+
 
 
       ?>

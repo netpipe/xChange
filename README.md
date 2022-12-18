@@ -8,3 +8,5 @@ chmod db folder to 777 so it can read write to the db
 
 
 donation address eth or wdoge 0xf4eAb54c568aEE89843f247DcE859846ba855394
+
+![xChange](screenshot.png)

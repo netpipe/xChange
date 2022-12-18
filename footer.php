@@ -1,5 +1,5 @@
 	<div id="footer2" style="border-radius: 15px 15px 15px 15px;margin:10px;background:#d0d0d0;clear:both;border:1px black solid;">
-	    			<br><br>
+	    			<br>
 
 <!--
 		<h1>VideoHost</h1><br>
@@ -16,7 +16,7 @@
 -->
 
         <i> xChange<br>
-        <br> Running this site requires no Javascript or Flash<br><br></i>
+        <br> no javascript required<br><br></i>
 
 
 	</div>	<!-- footer --> 

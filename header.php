@@ -20,9 +20,3 @@
 	  </ul>
 	<!-- </div> menu-->
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <p style="color:#F78989">use wallet generated file to upload transaction
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload" name="submit">
-        </p>
-    </form>
