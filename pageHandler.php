@@ -115,11 +115,9 @@
 		
 				 include('./' . $page . '/index.php');
 			} else {
-			if ( $expandedpath2 != "" ){
-							//		echo "PIC";
-					//	echo "./." . $page . "/" . $expandedpath2;
-		//	include('./' . $page . '/' . $expandedpath2 . '.php');
-		        # include('./' . $page . '/index.php');}
+			if ( $expandedpath == "" ){
+					include("mainpage.php");				
+
 			}
 			}
 
