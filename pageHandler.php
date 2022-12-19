@@ -58,7 +58,7 @@
     
     
 			include ("faucet2.php");
-			
+			    include ("dogetx.php");
 			
 
     
@@ -101,7 +101,7 @@
 			//echo $page;
 			if ( $expandedpath == "images"){
 			//uploads/mov/authd/
-                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
+                $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif,wmv,webm}', GLOB_BRACE);
 			    foreach($files as $file) {
 					render($file);
 				}

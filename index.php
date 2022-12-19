@@ -55,6 +55,7 @@
     echo '<div id="vbody" style="border-radius: 15px 15px 15px 15px;clear:both;text-align:center;background-color:green; margin:20px;border:2px black solid;" >';
   
     include ("pageHandler.php");
+
 		//	  include ("./PHPChart/examples/pie.php");
    //include ("./phpm/examples/download_chart_as_buffer.php");
     echo '</div>'; //end of green content box
