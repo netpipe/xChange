@@ -6,6 +6,8 @@
 			<li> <a href="./index.php">Home</a>  </li>
 			<li> <a href="?page=coins">Investments</a>  </li>
 			<li> <a href="?page=pot">cannabis</a>  </li>
+			<li> <a href="?page=chat">chat</a>  </li>
+			<li> <a href="?page=downloads">downloads</a>  </li>
 		 </ul>
 		</li>
 		<li id="CF" style="background:#5C6776 ; width:12% ">  <a href="?page=licence">About</a>  		

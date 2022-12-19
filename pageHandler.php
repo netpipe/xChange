@@ -5,7 +5,20 @@
 //echo $_GET['success'];
 //unset($_SESSION["success"]);
 
+        // DOWNLOADS
+        if  ( $page == "downloads"){
+          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
+          // rendervideo($test);
+          include("w2box/index.php"); 
 
+        }   
+                // CHAT
+        if  ( $page == "chat"){
+          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
+          // rendervideo($test);
+          include("chat.php"); 
+
+        }   
         // PRODUCT
         if  ( $page == "product"){
           //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
