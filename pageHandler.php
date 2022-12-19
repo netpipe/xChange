@@ -13,34 +13,13 @@
 
         }   
                 // CHAT
-        if  ( $page == "chat"){
-          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
-          // rendervideo($test);
-          include("chat.php"); 
-
-        }   
+        if  ( $page == "chat"){        include("chat.php");          }   
         // PRODUCT
-        if  ( $page == "product"){
-          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
-          // rendervideo($test);
-          include($page + "/index.php"); 
-
-        }   
-        
+        if  ( $page == "product"){     include($page + "/index.php");}   
         // REGISTER
-        if  ( $page == "register"){
-          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
-          // rendervideo($test);
-          include("register.php"); 
-
-        }   
+        if  ( $page == "register"){    include("register.php");      }   
         // LOGIN
-        if  ( $page == "login"){
-          //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
-          // rendervideo($test);
-          include("login.php"); 
-
-        }   
+        if  ( $page == "login"){       include("login.php");         }   
         // CONTACT
         if  ( $page == "contact"){
             echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
