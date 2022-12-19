@@ -32,14 +32,14 @@
 <?php include("header.php"); ?>
     
 	<div>
-		<h3>PHP - Login And Registration</h3>
-		<hr/>
 		<?php
-			echo "session val:: Username: ".$_SESSION['username'].".</br>";
-			echo "session val:: Password: ".$_SESSION['password']."</br>";
+
+			//echo "session val:: Password: ".$_SESSION['password']."</br>";
+		if ( $_SESSION['username'] == "" ){
+		echo '<a href="index.php?page=login">LOGIN</a>';
+		} else {			echo "welcome::".$_SESSION['username'].".</br>";}
 		?>
-		<a href="index.php?page=login">Logout</a>
-		<h1>Welcome <?php $username=""; echo $username; ?> !</h1>
+
 	</div>
       
 <?php
@@ -53,7 +53,8 @@
     include_once("render.php");
         //start of green div content box
     echo '<div id="vbody" style="border-radius: 15px 15px 15px 15px;clear:both;text-align:center;background-color:green; margin:20px;border:2px black solid;" >';
-        
+    echo "testing";
+    
     include ("pageHandler.php");
 		//	  include ("./PHPChart/examples/pie.php");
    //include ("./phpm/examples/download_chart_as_buffer.php");
