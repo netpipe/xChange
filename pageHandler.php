@@ -1,12 +1,12 @@
  <?php       
         //GET PAGE CALLBACK
-       // $page="";
+        $page="";
         $page=$_GET["page"];
-echo $_GET['success'];
-unset($_SESSION["success"]);
+//echo $_GET['success'];
+//unset($_SESSION["success"]);
 
 
-        // CONTACT
+        // PRODUCT
         if  ( $page == "product"){
           //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
           // rendervideo($test);
@@ -14,14 +14,14 @@ unset($_SESSION["success"]);
 
         }   
         
-        // CONTACT
+        // REGISTER
         if  ( $page == "register"){
           //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
           // rendervideo($test);
           include("register.php"); 
 
         }   
-        // CONTACT
+        // LOGIN
         if  ( $page == "login"){
           //  echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
           // rendervideo($test);
@@ -76,40 +76,48 @@ unset($_SESSION["success"]);
 			echo '<p align="middle"><B>Cannabis Pictures</B>';
 			$picpath = "images";
 			$dirs = glob($picpath . '/*' , GLOB_ONLYDIR);
+			
+
 			foreach($dirs as $dirs2) {
-				render($dirs2);
-				//get first file from dir to display as picture
+				$ep = explode("/", $dirs2);
+			    $ep2 = $ep[count($ep) - 1];
+			    $ep = $ep[count($ep) - 3];
+
+			    if ( $ep2 != "dice" ){
+				    render($dirs2);
+				    //get first file from dir to display as picture
+			    }
 			}
             echo "</p>";
-        }  
+        }  else {
+        
 
-				else {
+        
 			//$expandedpath=site_root($page);
 			$expandedpath = explode("/", $page);
 			$expandedpath2 = $expandedpath[count($expandedpath) - 1];
-			$expandedpath = $expandedpath[count($expandedpath) - 3];
-	
+			$expandedpath = $expandedpath[count($expandedpath) - 2];
+	        //echo "images test";
 			echo $expandedpath;
+			echo $page;
 			if ( $expandedpath == "images"){
 			//uploads/mov/authd/
                 $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
 			    foreach($files as $file) {
 					render($file);
-					
 				}
 			} elseif ( $expandedpath == "mov"){
-				
 				$files = glob($page.'/*.{webm}', GLOB_BRACE);
 			    foreach($files as $file) {
 					render($file);
-					
 				}
 			} else {
 			if ( $expandedpath2 != "" ){
 							//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
 			//include('./' . $page . '/' . $expandedpath2 . '.php');
-		    include('./' . $page . '/index.php');}
+		        # include('./' . $page . '/index.php');}
+			}
 			}
 
 
