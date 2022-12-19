@@ -106,16 +106,20 @@
 			    foreach($files as $file) {
 					render($file);
 				}
+						echo '<a href="index.php"> back </a>';
+				 include('./' . $page . '/index.php');
 			} elseif ( $expandedpath == "mov"){
 				$files = glob($page.'/*.{webm}', GLOB_BRACE);
 			    foreach($files as $file) {
 					render($file);
 				}
+		
+				 include('./' . $page . '/index.php');
 			} else {
 			if ( $expandedpath2 != "" ){
 							//		echo "PIC";
 					//	echo "./." . $page . "/" . $expandedpath2;
-			//include('./' . $page . '/' . $expandedpath2 . '.php');
+		//	include('./' . $page . '/' . $expandedpath2 . '.php');
 		        # include('./' . $page . '/index.php');}
 			}
 			}
