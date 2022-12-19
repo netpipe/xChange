@@ -21,17 +21,18 @@
 				}
 				if ( $extension == "php") {
 					echo '<a href="./book/' . $filename . "/"  . $filename . '.php">' . $filename . '</a>';
-					echo "PIC";
+					//=echo "PIC";
 					//echo "include ./book/" . $filename . '/index.php">
 				}
 								if ( $extension == "jpg") {
-					echo "PIC";
+					//echo "PIC";
 					//echo "include ./book/" . $filename . '/index.php">
+							echo '<a href="' . $file . '.jpg">' . $file . '</a>';
 				}
 				else {
-					echo '<a href="' . $file . "/" . $filename . '.php">' . $file . '</a>';
+					echo '<a href="' . $file . '">' . $file . '</a>';
 				//	echo 'include' . $file . "/" . $filename . ".php";
-				echo "PIC";
+				//echo "PIC";
 				}
 				echo '</div>';
 				//3rd bubble
@@ -71,11 +72,11 @@ echo "PIC";
 						// need jpg or png option
 					 }
 					 else { 
-						 echo "hi";
+						// echo "thumb";
 						 //~ echo "<img src=" . '"http://grandgallery.net/' . $file . 'width="400px"' . "/>"; 
 						 echo "<p><a href=" . './' . $file . ">";
 						 echo '<img src="./' . $file . '"' . ' alt="'. $file .'"' .' width="' .'160px"' . ' height="'.'160px"' . '/>'; 
-						 echo '</a></p>';	
+						 echo '</a></p><br>';	
 							}
 				echo '</div>';//content box
 	   echo '</div>'; //videobox
