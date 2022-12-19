@@ -97,16 +97,15 @@
 			$expandedpath = explode("/", $page);
 			$expandedpath2 = $expandedpath[count($expandedpath) - 1];
 			$expandedpath = $expandedpath[count($expandedpath) - 2];
-	        //echo "images test";
-			echo $expandedpath;
-			echo $page;
+			//echo $expandedpath;
+			//echo $page;
 			if ( $expandedpath == "images"){
 			//uploads/mov/authd/
                 $files = glob($page.'/*.{JPG,GIF,PNG,jpg,png,gif}', GLOB_BRACE);
 			    foreach($files as $file) {
 					render($file);
 				}
-						echo '<a href="index.php"> back </a>';
+						echo '<a href="index.php?page=pot"> back </a>';
 				 include('./' . $page . '/index.php');
 			} elseif ( $expandedpath == "mov"){
 				$files = glob($page.'/*.{webm}', GLOB_BRACE);
