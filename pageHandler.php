@@ -74,7 +74,7 @@
 				$ep = explode("/", $dirs2);
 			    $ep2 = $ep[count($ep) - 1];
 			    $ep = $ep[count($ep) - 3];
-echo '<p align="middle"><B>Cannabis Pictures</B>';
+
 			    if ( $ep2 != "dice" ){
 				    render($dirs2);
 				    //get first file from dir to display as picture
