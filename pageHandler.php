@@ -74,7 +74,7 @@
 				$ep = explode("/", $dirs2);
 			    $ep2 = $ep[count($ep) - 1];
 			    $ep = $ep[count($ep) - 3];
-
+echo '<p align="middle"><B>Cannabis Pictures</B>';
 			    if ( $ep2 != "dice" ){
 				    render($dirs2);
 				    //get first file from dir to display as picture
@@ -105,12 +105,11 @@
 					render($file);
 				}
 		
-				 include('./' . $page . '/index.php');
+				 //include('./' . $page . '/index.php');
 			} else {
-			if ( $expandedpath == "" ){
-					include("mainpage.php");				
-
-			}
+			    if ( $expandedpath2 == "" ){
+					    include("mainpage.php");				
+			    }
 			}
 
 
