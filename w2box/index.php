@@ -580,7 +580,7 @@ if ($dir>0) {
 </div>
 
 <div id="footer">
-  <p><a id="hiddenlink" href="?admin" onmouseover="return true;">Powered</a>.</p>
+  <p><a id="hiddenlink" href="w2box/index.php?admin" onmouseover="return true;">Powered</a>.</p>
 </div>
 </div>
 </body>
