@@ -432,9 +432,9 @@ function ls($dir) {
   var UPLOAD_SCRIPT = '<?php echo $config['upload_cgiscript']; ?>';
   //]]>-->
   </script>
-  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box/pt.ajax.js"></script>
-  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box/sorttable.js"></script>  
-  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box/w2box.js"></script>
+  <script type="text/javascript" src="w2box/pt.ajax.js"></script>
+  <script type="text/javascript" src="w2box/sorttable.js"></script>  
+  <script type="text/javascript" src="w2box/w2box.js"></script>
 
 
 <div id="page" class="mainbox">
