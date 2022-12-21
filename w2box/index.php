@@ -426,7 +426,7 @@ function ls($dir) {
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
   <title><?php echo $config['w2box_title']; ?> | powered by w2box</title>
-  <link rel="stylesheet" type="text/css" href="<?php echo rooturl(); ?>w2box.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo rooturl(); ?>w2box/w2box.css" />
   <script type="text/javascript">
   //<![CDATA[
   var ROOT_URL = '<?php echo rooturl(); ?>';
@@ -435,9 +435,9 @@ function ls($dir) {
   var UPLOAD_SCRIPT = '<?php echo $config['upload_cgiscript']; ?>';
   //]]>-->
   </script>
-  <script type="text/javascript" src="<?php echo rooturl(); ?>pt.ajax.js"></script>
-  <script type="text/javascript" src="<?php echo rooturl(); ?>sorttable.js"></script>  
-  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box.js"></script>
+  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box/pt.ajax.js"></script>
+  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box/sorttable.js"></script>  
+  <script type="text/javascript" src="<?php echo rooturl(); ?>w2box/w2box.js"></script>
 </head>
 
 <body onload="filetypeCheck();">
