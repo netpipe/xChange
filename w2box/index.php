@@ -421,7 +421,10 @@ function ls($dir) {
 
 
 ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
   <title><?php echo $config['w2box_title']; ?> | powered by w2box</title>
   <link rel="stylesheet" type="text/css" href="w2box/w2box.css" />
   <script type="text/javascript">
@@ -435,7 +438,7 @@ function ls($dir) {
   <script type="text/javascript" src="w2box/pt.ajax.js"></script>
   <script type="text/javascript" src="w2box/sorttable.js"></script>  
   <script type="text/javascript" src="w2box/w2box.js"></script>
-
+</head>
 
 <div id="page" class="mainbox">
 
@@ -579,3 +582,5 @@ if ($dir>0) {
   <p><a id="hiddenlink" href="w2box/index.php?admin" onmouseover="return true;">Powered</a>.</p>
 </div>
 </div>
+</body>
+</html>
