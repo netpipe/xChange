@@ -1,4 +1,4 @@
- <?php include("base.php"); ?> 
+ <?php include("coins/base.php"); ?> 
   
             <section class="container" style="margin-top:30px; display: flex;align-items: center;justify-content: center;">
         <div class="panel panel-default" style="width: 750px;">

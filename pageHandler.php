@@ -12,6 +12,8 @@
           include("w2box/index.php"); 
 
         }   
+                        // CHAT
+        if  ( $page == "order"){        include("./coins/orderform.php");          }  
                 // CHAT
         if  ( $page == "chat"){        include("chat.php");          }   
         // PRODUCT
@@ -49,8 +51,8 @@
             echo '</form>';
     
     
-			include ("faucet2.php");
-			    include ("dogetx.php");
+			include ("coins/faucet2.php");
+			    include ("coins/dogetx.php");
 			
 
     

@@ -1,6 +1,6 @@
 <?php
 //	session_start();
-	require_once 'login_query.php';
+	require_once 'login/login_query.php';
 ?>
 <!DOCTYPE html>
 <html xml:lang="en" lang="en">
@@ -43,9 +43,9 @@
 	</div>
       
 <?php
-//~ ini_set('display_errors', 1);
+// ini_set('display_errors', 1);
 //~ ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+error_reporting(E_ALL);
     $sitename="qtCoin.ca";
          //   $pwd = getcwd();
             //chdir('test');
