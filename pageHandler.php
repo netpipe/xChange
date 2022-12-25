@@ -19,9 +19,9 @@
         // PRODUCT
         if  ( $page == "product"){     include($page + "/index.php");}   
         // REGISTER
-        if  ( $page == "register"){    include("register.php");      }   
+        if  ( $page == "register"){    include("login/register.php");      }   
         // LOGIN
-        if  ( $page == "login"){       include("login.php");         }   
+        if  ( $page == "login"){       include("login/login.php");         }   
         // CONTACT
         if  ( $page == "contact"){
             echo '<a href="' . 'mailto:admin@' . $sitename.'"' .'> Email </a>';
