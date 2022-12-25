@@ -10,12 +10,12 @@
 		<h3>PHP - Login And Registration</h3>
 		<hr/>
 		<!-- Link for redirecting page to Registration page -->
-		<a href="../index.php?page=register">Not a member yet? Register here...</a>
+		<a href="index.php?page=register">Not a member yet? Register here...</a>
 		<br/><br />
 		<div></div>
 		<div>
 			<!-- Login Form Starts -->
-			<form method="POST" action="../index.php">	
+			<form method="POST" action="./index.php">	
 				<div>Login</div>
 				<div>
 					<label>Username</label>
