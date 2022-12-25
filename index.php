@@ -12,7 +12,7 @@
     <!--should be set higher for less traffic use DEVELOPMENT MODE-->
 
     <style type="text/css" media="screen, projection">
-        @import "style.css";
+        @import "assets/style.css";
     </style>
     
     <title>xChange</title>
