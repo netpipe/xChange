@@ -16,7 +16,7 @@ session_start();
 			echo "session val:: Username: ".$_SESSION['username'].".</br>";
 			echo "session val:: Password: ".$_SESSION['password']."</br>";
 		?>
-		<a href="login.php">Logout</a>
+		<a href="login/login.php">Logout</a>
 		<h1>Welcome User!</h1>
 	</div>
 </body>

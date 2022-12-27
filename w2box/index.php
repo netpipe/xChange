@@ -464,7 +464,7 @@ if ($config['enable_folder_maxdepth'] && (!($config['hide_makedir']) || $auth)) 
 if (!($config['hide_upload']) || $auth) { ?>
 <div id="uploadform" class="formdiv">
 <?php $sid = md5(uniqid(rand())); //unique file id ?>
- <form method="post" enctype="multipart/form-data" action="index.php">
+ <form method="post" enctype="multipart/form-data" action="w2box/index.php">
   <p><label for="file"><?php echo $lang['file'] ?> :</label><input type="file" id="file" name="file" size="50" onchange="renameSync();" /><input id="upload" type="submit" value="<?php echo $lang['upload'] ?>" class="button" <?php if ($config['upload_progressbar']) echo 'onclick="beginUpload(\''.$sid.'\');return false;" '; ?>/></p>
   <p><label for="filename"><?php echo $lang['renameto'] ?> :</label><input type="text" id="filename" name="filename" onkeyup="filetypeCheck();" size="50" /></p>
   <p class="small"><span id="allowed"><?php echo $lang['filetypesallowed'] ?> : <?php echo join(",",$config['allowed_ext']); ?></span>
