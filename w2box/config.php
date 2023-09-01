@@ -51,7 +51,7 @@ $config['upload_tmpdir']="tmp";
 // the bottom of the page.
 // 
 // if true, activate admin authentication
-$config['admin_actived'] = true;
+$config['admin_actived'] = false;
 // admin username
 $config['admin_username'] = "admin";
 // admin password

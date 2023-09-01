@@ -234,7 +234,7 @@ function uploadfile($file) {
 	if  ($errormsg=="") {
 		chmod ($filedest, 0755);
 		if ($config['log_upload']) logadm($lang['UPLOAD'].' '.$filedest);
-		$loc = rooturl();
+		$loc = returnurl();
 		if (filesize($dir)>0) $loc .= join("/",$dir)."/";
 		Header("Location: ".$loc);
 		exit;
@@ -362,6 +362,14 @@ function return_bytes($val) {
 	return $intval;
 }
 
+function returnurl(){
+	$dir = dirname($_SERVER['PHP_SELF']);
+	if (strlen($dir) > 1) $dir.="/";
+
+	return "http://".$_SERVER['HTTP_HOST'].$dir."?page=downloads";
+	//return "http://".$_SERVER['HTTP_HOST'].$dir."/w2box/index.php";
+}
+
 function rooturl(){
 	$dir = dirname($_SERVER['PHP_SELF']);
 	if (strlen($dir) > 1) $dir.="/";
@@ -464,7 +472,10 @@ if ($config['enable_folder_maxdepth'] && (!($config['hide_makedir']) || $auth)) 
 if (!($config['hide_upload']) || $auth) { ?>
 <div id="uploadform" class="formdiv">
 <?php $sid = md5(uniqid(rand())); //unique file id ?>
- <form method="post" enctype="multipart/form-data" action="w2box/index.php">
+
+
+<!-- UPLOAD FORM FILES MY COMMENT -->
+ <form method="post" enctype="multipart/form-data">
   <p><label for="file"><?php echo $lang['file'] ?> :</label><input type="file" id="file" name="file" size="50" onchange="renameSync();" /><input id="upload" type="submit" value="<?php echo $lang['upload'] ?>" class="button" <?php if ($config['upload_progressbar']) echo 'onclick="beginUpload(\''.$sid.'\');return false;" '; ?>/></p>
   <p><label for="filename"><?php echo $lang['renameto'] ?> :</label><input type="text" id="filename" name="filename" onkeyup="filetypeCheck();" size="50" /></p>
   <p class="small"><span id="allowed"><?php echo $lang['filetypesallowed'] ?> : <?php echo join(",",$config['allowed_ext']); ?></span>
@@ -472,6 +483,9 @@ if (!($config['hide_upload']) || $auth) { ?>
   <?php if ($config['delete_after']) echo   '<br />'.str_replace("{D}",$config['delete_after'],$lang['filedeleteafter']); ?>
   </p>
  </form>
+
+
+
 <?php if ($config['upload_progressbar']){ ?>
 <div id="upload_pb" style="display: none;">
   <p>Uploading <span id="upload_filename"></span> ...</p>
@@ -550,7 +564,7 @@ if ($dir>0) {
 		}
 
 		echo '&nbsp;';
-		if ($file['ext']!="directory") echo '<a href="?download='.urlencode($file['file']).'"><img src="'.rooturl().'images/download_arrow.gif" alt="('.$lang['download'].')" title="'.$lang['download_link'].'" /></a></td>';
+		if ($file['ext']!="directory") echo '<a href="?download='.urlencode($file['file']).'" download><img src="'.rooturl().'images/download_arrow.gif" alt="('.$lang['download'].')" title="'.$lang['download_link'].'" /></a></td>';
 		echo '<td>'.date ($lang['date_format'], $file['date']).'</td>';
 		echo '<td>';
 		if ($file['ext']!="directory") echo getfilesize($file['size']);
