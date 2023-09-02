@@ -1744,7 +1744,7 @@ class GetInfo{
     function blockchain_info_addressbalance() {
         
         if (empty($this->PRIVATE_ADDR)) return false;
-        $url = 'https://blockchain.info/en/q/addressbalance/' . $this->PRIVATE_ADDR;
+        $url = 'https://blockchain.info/q/addressbalance/' . $this->PRIVATE_ADDR;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
